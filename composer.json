@@ -1,0 +1,44 @@
+{
+    "name": "fguillot/kanboard",
+    "description": "Kanban project management software",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frédéric Guillot"
+        }
+    ],
+    "require" : {
+        "php" : ">=5.3",
+        "ext-mbstring" : "*",
+        "ext-gd" : "*",
+        "christian-riesen/otp" : "1.4",
+        "eluceo/ical": "0.8.0",
+        "erusev/parsedown" : "1.5.4",
+        "fabiang/xmpp" : "0.6.1",
+        "fguillot/json-rpc" : "1.0.3",
+        "fguillot/picodb" : "1.0.3",
+        "fguillot/simpleLogger" : "1.0.0",
+        "fguillot/simple-validator" : "1.0.0",
+        "league/html-to-markdown" : "~4.0",
+        "pimple/pimple" : "~3.0",
+        "swiftmailer/swiftmailer" : "~5.4",
+        "symfony/console" : "~2.7",
+        "symfony/event-dispatcher" : "~2.7",
+        "gregwar/captcha": "1.*"
+    },
+    "autoload" : {
+        "classmap" : ["app/"],
+        "psr-4" : {
+            "Kanboard\\Plugin\\": "plugins/",
+            "Kanboard\\" : "app/"
+        },
+        "files" : [
+            "app/functions.php",
+            "app/Library/password.php"
+        ]
+    },
+    "require-dev" : {
+        "symfony/stopwatch" : "~2.6",
+        "phpunit/phpunit": "4.8.36 || 5.7.25 || 6.5.2"
+    }
+}
